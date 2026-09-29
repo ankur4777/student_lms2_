@@ -1,0 +1,199 @@
+from django.urls import path
+
+from .views import (
+    StudentDashboardAPIView,
+    StudentProfileAPIView,
+    StudentLoginAPIView,
+    TeacherDashboardView,
+    TeacherProfileAPIView,
+    TeacherLoginAPIView,
+    CollegeAdminDashboardAPIView,
+    CollegeAdminEnrollmentDetailAPIView,
+    CollegeAdminEnrollmentsAPIView,
+    CollegeAdminEnrollmentSetupAPIView,
+    CollegeAdminLoginAPIView,
+    CollegeAdminInstitutionSettingsAPIView,
+    CollegeAdminParentDetailAPIView,
+    CollegeAdminParentLinkOptionsAPIView,
+    CollegeAdminParentsAPIView,
+    CollegeAdminParentStudentLinkDetailAPIView,
+    CollegeAdminParentStudentLinkManagementAPIView,
+    CollegeAdminParentStudentLinkManagementDetailAPIView,
+    CollegeAdminParentStudentLinkSetupAPIView,
+    CollegeAdminParentStudentLinksAPIView,
+    CollegeAdminProfileAPIView,
+    CollegeAdminStudentDetailAPIView,
+    CollegeAdminStudentEnrollmentAPIView,
+    CollegeAdminStudentsAPIView,
+    CollegeAdminTeacherAssignmentDetailAPIView,
+    CollegeAdminTeacherAssignmentSetupAPIView,
+    CollegeAdminTeacherAssignmentsAPIView,
+    CollegeAdminTeacherDetailAPIView,
+    CollegeAdminTeachersAPIView,
+    ParentLoginAPIView,
+    ParentChildrenAPIView,
+    ParentProfileAPIView,
+)
+
+urlpatterns = [
+    path(
+        'student/dashboard/',
+        StudentDashboardAPIView.as_view(),
+        name='student-dashboard'
+    ),
+    path(
+    'student/profile/',
+    StudentProfileAPIView.as_view(),
+    name='student-profile'
+),
+    path(
+    'student/login/',
+    StudentLoginAPIView.as_view(),
+    name='student-login'
+),
+    path(
+    "teacher/dashboard/",
+    TeacherDashboardView.as_view(),
+    name="teacher-dashboard",
+),
+    path(
+    "teacher/profile/",
+    TeacherProfileAPIView.as_view(),
+    name="teacher-profile",
+),
+    path(
+    "teacher/login/",
+    TeacherLoginAPIView.as_view(),
+    name="teacher-login",
+),
+    path(
+    "college-admin/login/",
+    CollegeAdminLoginAPIView.as_view(),
+    name="college-admin-login",
+),
+    path(
+    "college-admin/dashboard/",
+    CollegeAdminDashboardAPIView.as_view(),
+    name="college-admin-dashboard",
+),
+    path(
+        "college-admin/profile/",
+        CollegeAdminProfileAPIView.as_view(),
+        name="college-admin-profile",
+    ),
+    path(
+        "college-admin/institution-settings/",
+        CollegeAdminInstitutionSettingsAPIView.as_view(),
+        name="college-admin-institution-settings",
+    ),
+    path(
+    "college-admin/students/",
+    CollegeAdminStudentsAPIView.as_view(),
+    name="college-admin-students",
+),
+    path(
+    "college-admin/students/<int:student_id>/",
+    CollegeAdminStudentDetailAPIView.as_view(),
+    name="college-admin-student-detail",
+),
+    path(
+        "college-admin/students/<int:student_id>/enrollment/",
+        CollegeAdminStudentEnrollmentAPIView.as_view(),
+        name="college-admin-student-enrollment",
+    ),
+    path(
+        "college-admin/enrollments/setup/",
+        CollegeAdminEnrollmentSetupAPIView.as_view(),
+        name="college-admin-enrollment-setup",
+    ),
+    path(
+        "college-admin/enrollments/",
+        CollegeAdminEnrollmentsAPIView.as_view(),
+        name="college-admin-enrollments",
+    ),
+    path(
+        "college-admin/enrollments/<int:enrollment_id>/",
+        CollegeAdminEnrollmentDetailAPIView.as_view(),
+        name="college-admin-enrollment-detail",
+    ),
+    path(
+        "college-admin/teacher-assignments/setup/",
+        CollegeAdminTeacherAssignmentSetupAPIView.as_view(),
+        name="college-admin-teacher-assignment-setup",
+    ),
+    path(
+        "college-admin/teacher-assignments/",
+        CollegeAdminTeacherAssignmentsAPIView.as_view(),
+        name="college-admin-teacher-assignments",
+    ),
+    path(
+        "college-admin/teacher-assignments/<int:assignment_id>/",
+        CollegeAdminTeacherAssignmentDetailAPIView.as_view(),
+        name="college-admin-teacher-assignment-detail",
+    ),
+    path(
+        "college-admin/teachers/",
+        CollegeAdminTeachersAPIView.as_view(),
+        name="college-admin-teachers",
+    ),
+    path(
+        "college-admin/teachers/<int:teacher_id>/",
+        CollegeAdminTeacherDetailAPIView.as_view(),
+        name="college-admin-teacher-detail",
+    ),
+    path(
+        "college-admin/parents/",
+        CollegeAdminParentsAPIView.as_view(),
+        name="college-admin-parents",
+    ),
+    path(
+        "college-admin/parents/<int:parent_id>/",
+        CollegeAdminParentDetailAPIView.as_view(),
+        name="college-admin-parent-detail",
+    ),
+    path(
+        "college-admin/parents/<int:parent_id>/link-options/",
+        CollegeAdminParentLinkOptionsAPIView.as_view(),
+        name="college-admin-parent-link-options",
+    ),
+    path(
+        "college-admin/parents/<int:parent_id>/student-links/",
+        CollegeAdminParentStudentLinksAPIView.as_view(),
+        name="college-admin-parent-student-links",
+    ),
+    path(
+        "college-admin/parents/<int:parent_id>/student-links/<int:link_id>/",
+        CollegeAdminParentStudentLinkDetailAPIView.as_view(),
+        name="college-admin-parent-student-link-detail",
+    ),
+    path(
+        "college-admin/parent-student-links/setup/",
+        CollegeAdminParentStudentLinkSetupAPIView.as_view(),
+        name="college-admin-parent-student-link-setup",
+    ),
+    path(
+        "college-admin/parent-student-links/",
+        CollegeAdminParentStudentLinkManagementAPIView.as_view(),
+        name="college-admin-parent-student-links",
+    ),
+    path(
+        "college-admin/parent-student-links/<int:link_id>/",
+        CollegeAdminParentStudentLinkManagementDetailAPIView.as_view(),
+        name="college-admin-parent-student-link-management-detail",
+    ),
+    path(
+    "parent/login/",
+    ParentLoginAPIView.as_view(),
+    name="parent-login",
+),  
+    path(
+    "parent/children/",
+    ParentChildrenAPIView.as_view(),
+    name="parent-children",
+),
+    path(
+    "parent/profile/",
+    ParentProfileAPIView.as_view(),
+    name="parent-profile",
+),
+]

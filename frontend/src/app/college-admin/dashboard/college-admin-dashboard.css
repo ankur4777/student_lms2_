@@ -1,0 +1,1567 @@
+.college-admin-dashboard-redesign {
+  --cad-red: #ff3b3b;
+  --cad-red-dark: #e9232f;
+  --cad-soft-red: #fff0f1;
+  --cad-soft-red-2: #ffe5e8;
+  --cad-bg: #f6f8fc;
+  --cad-card: #ffffff;
+  --cad-text: #111827;
+  --cad-muted: #6b7280;
+  --cad-border: #e8edf4;
+  --cad-shadow: 0 10px 35px rgba(31, 41, 55, 0.07);
+  background: var(--cad-bg);
+  color: var(--cad-text);
+}
+
+.college-admin-dashboard-redesign .teacher-dashboard-main {
+  background: var(--cad-bg);
+}
+
+.college-admin-dashboard-redesign .teacher-topbar {
+  background: #fff;
+  border-bottom: 1px solid var(--cad-border);
+  min-height: 82px;
+  padding: 16px 28px;
+}
+
+.college-admin-dashboard-redesign .teacher-topbar h4 {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #172033;
+}
+
+.college-admin-dashboard-redesign .teacher-topbar .btn-outline-danger {
+  border-radius: 10px;
+  border-color: #ff6969;
+  color: var(--cad-red-dark);
+  font-weight: 700;
+}
+
+.college-admin-dashboard-redesign .teacher-sidebar {
+  background: #fff;
+  border-right: 1px solid var(--cad-border);
+}
+
+.college-admin-dashboard-redesign .teacher-sidebar-brand {
+  font-size: 1.28rem;
+  font-weight: 800;
+  color: #172033;
+  padding: 24px 20px 18px;
+}
+
+.college-admin-dashboard-redesign .teacher-sidebar-nav {
+  padding: 6px 12px 24px;
+}
+
+.college-admin-dashboard-redesign .teacher-sidebar-nav a {
+  border-radius: 10px;
+  color: #526078;
+  font-weight: 600;
+  padding: 10px 12px;
+  margin-bottom: 4px;
+  transition: background .18s ease, color .18s ease, transform .18s ease;
+}
+
+.college-admin-dashboard-redesign .teacher-sidebar-nav a:hover {
+  background: #fff5f5;
+  color: var(--cad-red-dark);
+  transform: translateX(2px);
+}
+
+.college-admin-dashboard-redesign .teacher-sidebar-nav a.active {
+  background: linear-gradient(90deg, #ffe8e9, #fff3f4);
+  color: var(--cad-red-dark);
+  box-shadow: inset 3px 0 0 var(--cad-red);
+}
+
+.cad-page {
+  padding: 18px 18px 36px;
+}
+
+.cad-page .container-fluid {
+  max-width: 1680px;
+}
+
+.cad-welcome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  min-height: 118px;
+  padding: 22px 28px;
+  margin-bottom: 18px;
+  border: 1px solid #ffdfe2;
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 84% 30%, rgba(255, 90, 100, .18), transparent 28%),
+    linear-gradient(115deg, #fff9f9 0%, #fff0f2 58%, #ffe7ea 100%);
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(255, 59, 59, .08);
+}
+
+.cad-eyebrow {
+  margin: 0 0 5px;
+  color: var(--cad-red-dark) !important;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.cad-welcome h1 {
+  margin: 0;
+  font-size: clamp(1.45rem, 2vw, 2.2rem);
+  font-weight: 800;
+  color: #152038;
+}
+
+.cad-welcome p {
+  color: #69758c;
+  margin: 5px 0 0;
+}
+
+.cad-welcome-side {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.cad-campus-art {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  color: rgba(255, 59, 59, .34);
+  font-size: 2.4rem;
+  letter-spacing: -.15em;
+}
+
+.cad-campus-art span:nth-child(2) {
+  font-size: 3.5rem;
+  color: rgba(255, 59, 59, .45);
+}
+
+.cad-date {
+  white-space: nowrap;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.72);
+  color: #63708a;
+  font-size: .82rem;
+  font-weight: 700;
+}
+
+.cad-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.cad-kpi-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-height: 128px;
+  padding: 20px 16px;
+  text-decoration: none;
+  color: inherit;
+  background: var(--cad-card);
+  border: 1px solid var(--cad-border);
+  border-radius: 16px;
+  box-shadow: var(--cad-shadow);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.cad-kpi-card:hover {
+  color: inherit;
+  transform: translateY(-2px);
+  border-color: #ffd3d6;
+  box-shadow: 0 14px 34px rgba(255, 59, 59, .10);
+}
+
+.cad-icon-box,
+.cad-panel-icon,
+.cad-action-icon,
+.cad-snapshot-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  color: var(--cad-red-dark);
+  background: var(--cad-soft-red);
+  border-radius: 10px;
+}
+
+.cad-icon-box {
+  width: 42px;
+  height: 42px;
+  font-size: 1.1rem;
+}
+
+.cad-icon-glyph {
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.cad-kpi-copy {
+  min-width: 0;
+}
+
+.cad-kpi-copy > span {
+  display: block;
+  color: #63708a;
+  font-size: .78rem;
+  line-height: 1.3;
+}
+
+.cad-kpi-copy strong {
+  display: block;
+  margin-top: 6px;
+  color: #101827;
+  font-size: 1.55rem;
+  line-height: 1.15;
+  font-weight: 850;
+  overflow-wrap: anywhere;
+}
+
+.cad-kpi-copy small {
+  display: block;
+  margin-top: 6px;
+  color: #8a94a6;
+  font-size: .7rem;
+}
+
+.cad-main-grid {
+  display: grid;
+  grid-template-columns: 1.18fr 1fr .82fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.cad-secondary-grid {
+  display: grid;
+  grid-template-columns: 1.25fr .9fr .8fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.cad-panel {
+  background: #fff;
+  border: 1px solid var(--cad-border);
+  border-radius: 16px;
+  box-shadow: var(--cad-shadow);
+}
+
+.cad-panel-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 18px 20px 12px;
+}
+
+.cad-panel-heading > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.cad-panel-heading.compact {
+  padding-bottom: 10px;
+}
+
+.cad-panel-heading h2 {
+  margin: 0;
+  color: #172033;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.cad-panel-heading p {
+  margin: 3px 0 0;
+  color: #8892a6;
+  font-size: .72rem;
+}
+
+.cad-panel-heading a {
+  color: var(--cad-red-dark);
+  font-size: .72rem;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.cad-panel-icon {
+  width: 34px;
+  height: 34px;
+  font-weight: 900;
+}
+
+.cad-attendance-body,
+.cad-fee-body {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 10px 20px 22px;
+}
+
+.cad-ring,
+.cad-fee-ring {
+  position: relative;
+  flex: 0 0 154px;
+  width: 154px;
+  height: 154px;
+  border-radius: 50%;
+}
+
+.cad-ring {
+  background:
+    conic-gradient(var(--cad-red) 0 var(--cad-progress), #ffe2e5 var(--cad-progress) 360deg);
+}
+
+.cad-fee-ring {
+  background:
+    conic-gradient(var(--cad-red) 0 var(--cad-fee-progress), #ffdce0 var(--cad-fee-progress) 360deg);
+}
+
+.cad-ring::after,
+.cad-fee-ring::after {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px #fff1f2;
+}
+
+.cad-ring-inner,
+.cad-fee-ring > div {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.cad-ring-inner strong,
+.cad-fee-ring strong {
+  color: #111827;
+  font-size: 1.45rem;
+  font-weight: 850;
+}
+
+.cad-ring-inner span,
+.cad-fee-ring span {
+  max-width: 90px;
+  color: #8b94a5;
+  font-size: .7rem;
+  line-height: 1.3;
+}
+
+.cad-attendance-stats {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.cad-stat-tile {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 66px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #f8fafc;
+}
+
+.cad-stat-tile.success { background: #eefbf5; }
+.cad-stat-tile.danger { background: #fff1f2; }
+.cad-stat-tile.warning { background: #fff8e7; }
+.cad-stat-tile.neutral { background: #f4f6f8; }
+
+.cad-stat-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #97a0af;
+}
+
+.cad-stat-tile.success .cad-stat-dot { background: #18b66d; }
+.cad-stat-tile.danger .cad-stat-dot { background: #ff4f5e; }
+.cad-stat-tile.warning .cad-stat-dot { background: #f7b521; }
+
+.cad-stat-tile strong,
+.cad-stat-tile small {
+  display: block;
+}
+
+.cad-stat-tile strong {
+  color: #192235;
+  font-size: 1.05rem;
+}
+
+.cad-stat-tile small {
+  color: #758198;
+  font-size: .7rem;
+}
+
+.cad-fee-legend {
+  flex: 1;
+  display: grid;
+  gap: 14px;
+}
+
+.cad-fee-legend > div {
+  display: grid;
+  grid-template-columns: 10px 1fr auto auto;
+  align-items: center;
+  gap: 8px;
+  font-size: .72rem;
+}
+
+.cad-fee-legend strong {
+  color: #1e293b;
+}
+
+.cad-fee-legend small {
+  color: #8993a5;
+  min-width: 34px;
+  text-align: right;
+}
+
+.cad-legend-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.cad-legend-dot.collected { background: var(--cad-red); }
+.cad-legend-dot.pending { background: #ffc4ca; }
+
+.cad-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  padding: 8px 16px 18px;
+}
+
+.cad-action-tile {
+  position: relative;
+  display: grid;
+  grid-template-columns: 30px 1fr auto;
+  align-items: center;
+  gap: 7px;
+  min-height: 68px;
+  padding: 10px;
+  color: #29334a;
+  text-decoration: none;
+  border: 1px solid #ffe0e2;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #fff5f5, #fff0f2);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.cad-action-tile:hover {
+  color: var(--cad-red-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 59, 59, .10);
+}
+
+.cad-action-icon {
+  width: 30px;
+  height: 30px;
+  background: transparent;
+}
+
+.cad-action-tile strong {
+  font-size: .73rem;
+  line-height: 1.25;
+}
+
+.cad-action-arrow {
+  color: var(--cad-red);
+  font-size: 1rem;
+}
+
+.cad-table-panel .table-responsive {
+  padding: 0 14px 14px;
+}
+
+.cad-table {
+  font-size: .72rem;
+}
+
+.cad-table thead th {
+  color: #65718a;
+  background: #f7f9fc;
+  border-bottom: 0;
+  font-weight: 800;
+}
+
+.cad-table tbody td {
+  border-color: #eef2f6;
+}
+
+.cad-table td strong,
+.cad-table td small {
+  display: block;
+}
+
+.cad-table td small {
+  color: #8791a4;
+  margin-top: 2px;
+}
+
+.cad-empty-cell {
+  padding: 30px !important;
+  color: #8a94a6 !important;
+  text-align: center;
+}
+
+.cad-empty-state {
+  display: flex;
+  min-height: 176px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 18px;
+  text-align: center;
+  color: #8590a3;
+}
+
+.cad-empty-state.compact {
+  min-height: 0;
+  padding: 24px 16px;
+}
+
+.cad-empty-state strong {
+  color: #465168;
+  font-size: .82rem;
+}
+
+.cad-empty-state span {
+  max-width: 260px;
+  font-size: .7rem;
+}
+
+.cad-empty-state a {
+  color: var(--cad-red-dark);
+  font-size: .72rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.cad-empty-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 4px;
+  border-radius: 12px;
+  background: var(--cad-soft-red);
+  color: var(--cad-red-dark);
+  font-weight: 900;
+}
+
+.cad-notice-list {
+  padding: 0 16px 12px;
+}
+
+.cad-notice-item {
+  display: grid;
+  grid-template-columns: 8px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 2px;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid #eef1f5;
+}
+
+.cad-notice-item:last-child {
+  border-bottom: 0;
+}
+
+.cad-notice-item strong,
+.cad-notice-item small {
+  display: block;
+}
+
+.cad-notice-item strong {
+  max-width: 190px;
+  color: #263149;
+  font-size: .75rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cad-notice-item small {
+  margin-top: 3px;
+  color: #99a2b2;
+  font-size: .65rem;
+}
+
+.cad-notice-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #9aa3b1;
+}
+
+.cad-notice-dot.success { background: #ff3b3b; }
+.cad-notice-dot.info { background: #ff8992; }
+.cad-notice-dot.dark { background: #98a3b5; }
+
+.cad-analytics-panel,
+.cad-snapshot-panel {
+  margin-bottom: 16px;
+}
+
+.cad-analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  padding: 0 16px 18px;
+}
+
+.cad-mini-chart {
+  min-height: 125px;
+  padding: 14px;
+  border: 1px solid #edf0f4;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #fff, #fffafa);
+}
+
+.cad-mini-chart > span,
+.cad-mini-chart strong,
+.cad-mini-chart small {
+  display: block;
+}
+
+.cad-mini-chart > span {
+  color: #66738a;
+  font-size: .72rem;
+  font-weight: 700;
+}
+
+.cad-mini-chart strong {
+  margin-top: 8px;
+  color: #172033;
+  font-size: 1.4rem;
+}
+
+.cad-mini-chart small {
+  margin-top: 8px;
+  color: #929bac;
+  font-size: .67rem;
+}
+
+.cad-bar-track {
+  height: 28px;
+  margin-top: 10px;
+  display: flex;
+  align-items: flex-end;
+  border-bottom: 1px solid #e6eaf0;
+  background:
+    repeating-linear-gradient(to top, transparent 0 8px, #f3f5f8 8px 9px);
+}
+
+.cad-bar-track i {
+  display: block;
+  height: 16px;
+  max-width: 100%;
+  border-radius: 4px 4px 0 0;
+  background: linear-gradient(90deg, #ff8f97, #ff3b3b);
+}
+
+.cad-snapshot-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  padding: 0 16px 18px;
+}
+
+.cad-snapshot-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 72px;
+  padding: 11px;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eef1f4;
+  border-radius: 12px;
+  background: #fbfcfe;
+}
+
+.cad-snapshot-card:hover {
+  color: var(--cad-red-dark);
+  border-color: #ffd8da;
+  background: #fff8f8;
+}
+
+.cad-snapshot-icon {
+  width: 34px;
+  height: 34px;
+}
+
+.cad-snapshot-card small,
+.cad-snapshot-card strong {
+  display: block;
+}
+
+.cad-snapshot-card small {
+  color: #778399;
+  font-size: .68rem;
+}
+
+.cad-snapshot-card strong {
+  color: #172033;
+  font-size: 1.05rem;
+}
+
+.cad-activity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.cad-activity-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 16px;
+  padding: 12px 2px;
+  border-top: 1px solid #eef1f5;
+}
+
+.cad-activity-row strong,
+.cad-activity-row small {
+  display: block;
+}
+
+.cad-activity-row strong {
+  color: #29354c;
+  font-size: .78rem;
+}
+
+.cad-activity-row small,
+.cad-activity-row > span {
+  color: #8b95a7;
+  font-size: .68rem;
+}
+
+.cad-loading-card {
+  margin: 30px;
+  padding: 60px;
+  border: 1px solid var(--cad-border);
+  border-radius: 16px;
+  background: #fff;
+  color: #6b7280;
+  text-align: center;
+  box-shadow: var(--cad-shadow);
+}
+
+@media (max-width: 1500px) {
+  .cad-kpi-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .cad-main-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cad-actions-panel {
+    grid-column: 1 / -1;
+  }
+
+  .cad-actions-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .cad-secondary-grid {
+    grid-template-columns: 1.2fr .8fr;
+  }
+
+  .cad-notices {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 1100px) {
+  .cad-page {
+    padding: 16px 10px 28px;
+  }
+
+  .cad-main-grid,
+  .cad-secondary-grid,
+  .cad-activity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cad-actions-panel,
+  .cad-notices {
+    grid-column: auto;
+  }
+
+  .cad-analytics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cad-snapshot-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .cad-welcome {
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .cad-welcome-side,
+  .cad-campus-art {
+    display: none;
+  }
+
+  .cad-kpi-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cad-kpi-card {
+    min-height: 112px;
+    padding: 15px 12px;
+  }
+
+  .cad-kpi-copy strong {
+    font-size: 1.25rem;
+  }
+
+  .cad-attendance-body,
+  .cad-fee-body {
+    flex-direction: column;
+  }
+
+  .cad-actions-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cad-analytics-grid,
+  .cad-snapshot-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .cad-kpi-grid,
+  .cad-actions-grid,
+  .cad-analytics-grid,
+  .cad-snapshot-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cad-panel-heading {
+    flex-direction: column;
+  }
+
+  .cad-attendance-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cad-fee-legend > div {
+    grid-template-columns: 10px 1fr auto;
+  }
+
+  .cad-fee-legend small {
+    display: none;
+  }
+
+  .cad-activity-row {
+    flex-direction: column;
+  }
+}
+
+
+/* Professional polish */
+.college-admin-dashboard-redesign,
+.college-admin-dashboard-redesign button,
+.college-admin-dashboard-redesign input,
+.college-admin-dashboard-redesign select,
+.college-admin-dashboard-redesign textarea {
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.college-admin-dashboard-redesign {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.college-admin-dashboard-redesign .teacher-topbar h4,
+.college-admin-dashboard-redesign .teacher-sidebar-brand,
+.cad-welcome h1,
+.cad-panel-heading h2 {
+  letter-spacing: -0.025em;
+}
+
+.college-admin-dashboard-redesign .teacher-topbar h4 {
+  font-size: 1.28rem;
+  font-weight: 700;
+}
+
+.college-admin-dashboard-redesign .teacher-sidebar-brand {
+  font-size: 1.2rem;
+  font-weight: 750;
+}
+
+.college-admin-dashboard-redesign .teacher-sidebar-nav a {
+  font-size: .82rem;
+  font-weight: 560;
+  padding: 9px 11px;
+}
+
+.college-admin-nav-label {
+  display: inline-flex;
+  min-width: 0;
+  align-items: center;
+  gap: 10px;
+}
+
+.college-admin-nav-label svg {
+  flex: 0 0 auto;
+  color: #77839a;
+  transition: color .18s ease, transform .18s ease;
+}
+
+.college-admin-dashboard-redesign .teacher-sidebar-nav a:hover .college-admin-nav-label svg,
+.college-admin-dashboard-redesign .teacher-sidebar-nav a.active .college-admin-nav-label svg {
+  color: var(--cad-red-dark);
+  transform: scale(1.04);
+}
+
+.cad-welcome h1 {
+  font-weight: 760;
+}
+
+.cad-eyebrow {
+  font-weight: 700;
+}
+
+.cad-kpi-card {
+  align-items: center;
+  min-width: 0;
+}
+
+.cad-kpi-copy {
+  width: 100%;
+}
+
+.cad-kpi-copy > span {
+  font-size: .75rem;
+  font-weight: 560;
+}
+
+.cad-kpi-copy strong {
+  font-size: clamp(1.25rem, 1.55vw, 1.65rem);
+  font-weight: 760;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cad-kpi-copy small {
+  font-size: .66rem;
+  font-weight: 450;
+}
+
+.cad-icon-box,
+.cad-panel-icon,
+.cad-snapshot-icon {
+  color: #ed2f3c;
+  background: linear-gradient(145deg, #fff3f4, #ffe9eb);
+  border: 1px solid rgba(255, 59, 59, .08);
+}
+
+.cad-icon-box svg,
+.cad-panel-icon svg,
+.cad-action-icon svg,
+.cad-snapshot-icon svg,
+.cad-empty-icon svg {
+  display: block;
+}
+
+.cad-panel-heading h2 {
+  font-size: 1.02rem !important;
+  line-height: 1.25;
+  font-weight: 720;
+}
+
+.cad-panel-heading p {
+  font-size: .7rem;
+  line-height: 1.45;
+}
+
+.cad-panel-heading a {
+  font-weight: 650;
+}
+
+.cad-action-tile strong {
+  font-size: .72rem;
+  font-weight: 650;
+}
+
+.cad-action-icon {
+  color: var(--cad-red-dark);
+}
+
+.cad-action-arrow {
+  font-weight: 500;
+}
+
+.cad-ring-inner strong,
+.cad-fee-ring strong {
+  font-weight: 740;
+  letter-spacing: -0.025em;
+}
+
+.cad-stat-tile strong {
+  font-weight: 700;
+}
+
+.cad-stat-tile small,
+.cad-fee-legend,
+.cad-table,
+.cad-notice-item,
+.cad-mini-chart,
+.cad-snapshot-card,
+.cad-activity-row {
+  font-feature-settings: "tnum" 1, "lnum" 1;
+}
+
+.cad-table thead th {
+  font-weight: 650;
+  letter-spacing: .01em;
+}
+
+.cad-table td strong,
+.cad-notice-item strong,
+.cad-activity-row strong {
+  font-weight: 650;
+}
+
+.cad-mini-chart > span,
+.cad-snapshot-card small {
+  font-weight: 560;
+}
+
+.cad-mini-chart strong,
+.cad-snapshot-card strong {
+  font-weight: 720;
+  letter-spacing: -0.02em;
+}
+
+.cad-campus-art {
+  letter-spacing: 0;
+}
+
+.cad-campus-art span {
+  display: inline-flex;
+  color: rgba(255, 67, 78, .28);
+}
+
+.cad-campus-art span:nth-child(2) {
+  color: rgba(255, 67, 78, .42);
+}
+
+@media (max-width: 1280px) {
+  .cad-kpi-copy strong {
+    font-size: 1.28rem;
+  }
+}
+
+
+/* Human-crafted visual refinement */
+.college-admin-dashboard-redesign {
+  --cad-red: #ef4444;
+  --cad-red-dark: #dc2626;
+  --cad-soft-red: #fff5f5;
+  --cad-bg: #f7f8fa;
+  --cad-card: #ffffff;
+  --cad-text: #1f2937;
+  --cad-muted: #6b7280;
+  --cad-border: #e5e7eb;
+  --cad-shadow: 0 1px 2px rgba(15, 23, 42, .04), 0 6px 18px rgba(15, 23, 42, .035);
+}
+
+.college-admin-dashboard-redesign .teacher-topbar {
+  min-height: 74px;
+  padding: 14px 24px;
+  border-bottom: 1px solid #e7e9ee;
+  box-shadow: none;
+}
+
+.college-admin-dashboard-redesign .teacher-topbar h4 {
+  font-size: 1.22rem;
+  font-weight: 650;
+  letter-spacing: -0.018em;
+}
+
+.college-admin-dashboard-redesign .teacher-topbar p,
+.college-admin-dashboard-redesign .teacher-topbar .small {
+  font-size: .78rem;
+}
+
+.college-admin-dashboard-redesign .teacher-sidebar {
+  border-right: 1px solid #e6e8ed;
+  box-shadow: none;
+}
+
+.college-admin-dashboard-redesign .teacher-sidebar-brand {
+  padding: 20px 18px 14px;
+  font-size: 1.12rem;
+  font-weight: 700;
+}
+
+.college-admin-dashboard-redesign .teacher-sidebar-nav {
+  padding: 4px 10px 20px;
+}
+
+.college-admin-dashboard-redesign .teacher-sidebar-nav a {
+  margin-bottom: 2px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: .8rem;
+  font-weight: 520;
+  color: #5f6b7c;
+}
+
+.college-admin-dashboard-redesign .teacher-sidebar-nav a:hover {
+  transform: none;
+  background: #f9fafb;
+  color: #1f2937;
+}
+
+.college-admin-dashboard-redesign .teacher-sidebar-nav a.active {
+  background: #fff3f3;
+  color: #c92a2a;
+  box-shadow: inset 2px 0 0 #ef4444;
+}
+
+.college-admin-nav-label {
+  gap: 9px;
+}
+
+.college-admin-nav-label svg {
+  color: #8792a2;
+}
+
+.cad-page {
+  padding: 18px 18px 32px;
+}
+
+.cad-page .container-fluid {
+  max-width: 1600px;
+}
+
+.cad-welcome {
+  min-height: 0;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  border: 1px solid #e8eaf0;
+  border-left: 4px solid #ef4444;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: none;
+}
+
+.cad-eyebrow {
+  margin-bottom: 4px;
+  color: #b42318 !important;
+  font-size: .66rem;
+  font-weight: 650;
+  letter-spacing: .08em;
+}
+
+.cad-welcome h1 {
+  font-size: clamp(1.32rem, 1.7vw, 1.85rem);
+  font-weight: 690;
+  letter-spacing: -0.022em;
+  color: #1f2937;
+}
+
+.cad-welcome p {
+  margin-top: 4px;
+  color: #6b7280;
+  font-size: .86rem;
+}
+
+.cad-campus-art {
+  display: none;
+}
+
+.cad-date {
+  padding: 7px 10px;
+  border: 1px solid #e6e8ed;
+  border-radius: 8px;
+  background: #fafafa;
+  color: #687386;
+  font-size: .74rem;
+  font-weight: 560;
+}
+
+.cad-kpi-grid {
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.cad-kpi-card {
+  min-height: 108px;
+  padding: 16px 14px;
+  gap: 11px;
+  border: 1px solid #e6e8ed;
+  border-radius: 12px;
+  box-shadow: var(--cad-shadow);
+}
+
+.cad-kpi-card:hover {
+  transform: translateY(-1px);
+  border-color: #dadde3;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, .06);
+}
+
+.cad-icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
+  background: #fff4f4;
+  border-color: #ffe2e2;
+}
+
+.cad-kpi-copy > span {
+  font-size: .73rem;
+  font-weight: 520;
+  color: #667085;
+}
+
+.cad-kpi-copy strong {
+  margin-top: 4px;
+  font-size: clamp(1.28rem, 1.45vw, 1.55rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: #1f2937;
+}
+
+.cad-kpi-copy small {
+  margin-top: 4px;
+  font-size: .64rem;
+  color: #98a2b3;
+}
+
+.cad-main-grid,
+.cad-secondary-grid,
+.cad-activity-grid {
+  gap: 14px;
+}
+
+.cad-main-grid,
+.cad-secondary-grid {
+  margin-bottom: 14px;
+}
+
+.cad-panel {
+  border: 1px solid #e6e8ed;
+  border-radius: 12px;
+  box-shadow: var(--cad-shadow);
+}
+
+.cad-panel-heading {
+  padding: 16px 18px 10px;
+}
+
+.cad-panel-heading h2 {
+  font-size: .98rem !important;
+  font-weight: 680;
+  letter-spacing: -0.018em;
+}
+
+.cad-panel-heading p {
+  margin-top: 2px;
+  font-size: .68rem;
+  color: #8a94a6;
+}
+
+.cad-panel-heading a {
+  font-size: .68rem;
+  font-weight: 600;
+}
+
+.cad-panel-icon,
+.cad-snapshot-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #fff4f4;
+  border: 1px solid #ffe3e3;
+}
+
+.cad-attendance-body,
+.cad-fee-body {
+  gap: 18px;
+  padding: 10px 18px 18px;
+}
+
+.cad-ring,
+.cad-fee-ring {
+  flex-basis: 142px;
+  width: 142px;
+  height: 142px;
+}
+
+.cad-ring::after,
+.cad-fee-ring::after {
+  inset: 13px;
+}
+
+.cad-ring-inner strong,
+.cad-fee-ring strong {
+  font-size: 1.34rem;
+  font-weight: 700;
+}
+
+.cad-ring-inner span,
+.cad-fee-ring span {
+  font-size: .66rem;
+}
+
+.cad-attendance-stats {
+  gap: 8px;
+}
+
+.cad-stat-tile {
+  min-height: 60px;
+  padding: 10px 11px;
+  border-radius: 9px;
+}
+
+.cad-stat-tile.success { background: #f4fbf7; }
+.cad-stat-tile.danger { background: #fff6f6; }
+.cad-stat-tile.warning { background: #fffaf0; }
+.cad-stat-tile.neutral { background: #f7f8fa; }
+
+.cad-stat-tile strong {
+  font-size: .98rem;
+  font-weight: 680;
+}
+
+.cad-stat-tile small {
+  font-size: .66rem;
+}
+
+.cad-fee-legend {
+  gap: 12px;
+}
+
+.cad-fee-legend > div {
+  font-size: .69rem;
+}
+
+.cad-actions-grid {
+  gap: 8px;
+  padding: 8px 14px 16px;
+}
+
+.cad-action-tile {
+  min-height: 60px;
+  padding: 9px 10px;
+  border: 1px solid #e9eaee;
+  border-radius: 9px;
+  background: #fff;
+}
+
+.cad-action-tile:hover {
+  transform: none;
+  border-color: #f1b8b8;
+  background: #fffafa;
+  box-shadow: none;
+}
+
+.cad-action-tile strong {
+  font-size: .7rem;
+  font-weight: 600;
+}
+
+.cad-action-icon {
+  color: #d92d20;
+}
+
+.cad-table-panel .table-responsive {
+  padding: 0 12px 12px;
+}
+
+.cad-table {
+  font-size: .7rem;
+}
+
+.cad-table thead th {
+  background: #f8f9fb;
+  color: #667085;
+  font-weight: 600;
+}
+
+.cad-empty-state {
+  min-height: 154px;
+  padding: 16px;
+}
+
+.cad-empty-state strong {
+  font-size: .78rem;
+  font-weight: 600;
+}
+
+.cad-notice-list {
+  padding: 0 14px 10px;
+}
+
+.cad-notice-item {
+  padding: 10px 1px;
+}
+
+.cad-notice-item strong {
+  font-size: .72rem;
+  font-weight: 600;
+}
+
+.cad-notice-item small {
+  font-size: .63rem;
+}
+
+.cad-analytics-panel,
+.cad-snapshot-panel {
+  margin-bottom: 14px;
+}
+
+.cad-analytics-grid {
+  gap: 10px;
+  padding: 0 14px 16px;
+}
+
+.cad-mini-chart {
+  min-height: 112px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.cad-mini-chart > span {
+  font-size: .68rem;
+  font-weight: 550;
+}
+
+.cad-mini-chart strong {
+  margin-top: 6px;
+  font-size: 1.28rem;
+  font-weight: 690;
+}
+
+.cad-mini-chart small {
+  font-size: .64rem;
+}
+
+.cad-snapshot-grid {
+  gap: 8px;
+  padding: 0 14px 16px;
+}
+
+.cad-snapshot-card {
+  min-height: 64px;
+  padding: 9px 10px;
+  border-radius: 9px;
+  background: #fff;
+}
+
+.cad-snapshot-card:hover {
+  background: #fffafa;
+}
+
+.cad-snapshot-card small {
+  font-size: .64rem;
+}
+
+.cad-snapshot-card strong {
+  font-size: .98rem;
+  font-weight: 680;
+}
+
+.cad-activity-row {
+  margin: 0 14px;
+  padding: 10px 1px;
+}
+
+.cad-activity-row strong {
+  font-size: .73rem;
+  font-weight: 600;
+}
+
+.cad-activity-row small,
+.cad-activity-row > span {
+  font-size: .64rem;
+}
+
+@media (max-width: 1500px) {
+  .cad-kpi-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .cad-main-grid {
+    grid-template-columns: 1.15fr 1fr .82fr;
+  }
+
+  .cad-actions-panel {
+    grid-column: auto;
+  }
+
+  .cad-actions-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cad-secondary-grid {
+    grid-template-columns: 1.22fr .9fr .82fr;
+  }
+
+  .cad-notices {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 1320px) {
+  .cad-kpi-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .cad-main-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cad-actions-panel {
+    grid-column: 1 / -1;
+  }
+
+  .cad-actions-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .cad-secondary-grid {
+    grid-template-columns: 1.2fr .8fr;
+  }
+
+  .cad-notices {
+    grid-column: 1 / -1;
+  }
+}

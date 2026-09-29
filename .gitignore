@@ -1,0 +1,33 @@
+# Django private uploaded files
+/private_media/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+/venv/
+
+# Environment variables
+.env
+
+# Local databases
+*.sqlite3
+
+# IDE
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class

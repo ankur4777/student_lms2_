@@ -1,0 +1,1095 @@
+.parent-ui-scope {
+  --parent-red: #ef4444;
+  --parent-red-dark: #dc2626;
+  --parent-red-soft: #fff5f5;
+  --parent-bg: #f7f8fa;
+  --parent-card: #ffffff;
+  --parent-text: #1f2937;
+  --parent-muted: #6b7280;
+  --parent-soft-muted: #98a2b3;
+  --parent-border: #e5e7eb;
+  --parent-success: #198754;
+  --parent-warning: #f59e0b;
+  --parent-danger: #ef4444;
+  --parent-shadow: 0 1px 2px rgba(15, 23, 42, .035), 0 5px 16px rgba(15, 23, 42, .035);
+  min-height: 100vh;
+  background: var(--parent-bg);
+  color: var(--parent-text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.parent-ui-scope,
+.parent-ui-scope button,
+.parent-ui-scope input,
+.parent-ui-scope select,
+.parent-ui-scope textarea {
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.parent-ui-scope .student-dashboard {
+  background: var(--parent-bg);
+}
+
+/* Sidebar */
+.parent-ui-scope .parent-sidebar {
+  width: 246px;
+  padding: 18px 12px;
+  background: #fff;
+  border-right: 1px solid #e6e8ed;
+  box-shadow: none;
+}
+
+.parent-ui-scope .student-dashboard-main {
+  margin-left: 246px;
+  width: calc(100% - 246px);
+  background: var(--parent-bg);
+}
+
+.parent-ui-scope .parent-sidebar-brand {
+  gap: 10px;
+  padding: 4px 7px 16px;
+  margin-bottom: 12px;
+}
+
+.parent-ui-scope .parent-brand-logo {
+  display: inline-flex;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #fff3f3;
+  border: 1px solid #ffdede;
+  color: #d92d20;
+}
+
+.parent-ui-scope .parent-sidebar-brand h5 {
+  margin: 0;
+  color: #202939;
+  font-size: 1rem;
+  font-weight: 720;
+  letter-spacing: -.018em;
+}
+
+.parent-ui-scope .parent-sidebar-brand small {
+  color: #7c8799;
+  font-size: .68rem;
+}
+
+.parent-ui-scope .parent-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.parent-ui-scope .parent-sidebar-nav a {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: #5d687a;
+  font-size: .79rem;
+  font-weight: 540;
+  text-decoration: none;
+  transition: background-color .16s ease, color .16s ease;
+}
+
+.parent-ui-scope .parent-sidebar-nav a:hover {
+  background: #f8f9fb;
+  color: #273244;
+}
+
+.parent-ui-scope .parent-sidebar-nav a.active {
+  background: #fff3f3;
+  color: #c92a2a;
+  box-shadow: inset 2px 0 0 var(--parent-red);
+}
+
+.parent-ui-scope .parent-nav-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.parent-ui-scope .parent-nav-label svg {
+  color: #8792a2;
+}
+
+.parent-ui-scope .parent-sidebar-nav a.active .parent-nav-label svg {
+  color: #d92d20;
+}
+
+.parent-ui-scope .sidebar-product-credit {
+  margin-top: auto;
+  padding: 14px 6px 2px;
+  border-top: 1px solid #eef0f3;
+}
+
+/* Topbar */
+.parent-ui-scope .parent-topbar {
+  min-height: 72px;
+  padding: 12px 22px;
+  border-bottom: 1px solid #e7e9ee;
+  background: rgba(255, 255, 255, .97);
+  box-shadow: none;
+  backdrop-filter: blur(8px);
+}
+
+.parent-ui-scope .parent-topbar-title h4 {
+  color: #202939;
+  font-size: 1.15rem;
+  font-weight: 680;
+  letter-spacing: -.02em;
+}
+
+.parent-ui-scope .parent-topbar-title p {
+  color: #7c8799;
+  font-size: .72rem;
+}
+
+.parent-ui-scope .parent-topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.parent-ui-scope .parent-topbar-organization {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #667085;
+  font-size: .72rem;
+}
+
+.parent-ui-scope .parent-topbar-user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.parent-ui-scope .parent-topbar-avatar {
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff2f2;
+  color: #c92a2a;
+  font-size: .7rem;
+  font-weight: 700;
+}
+
+.parent-ui-scope .parent-topbar-user strong,
+.parent-ui-scope .parent-topbar-user small {
+  display: block;
+}
+
+.parent-ui-scope .parent-topbar-user strong {
+  color: #273244;
+  font-size: .72rem;
+  font-weight: 650;
+}
+
+.parent-ui-scope .parent-topbar-user small {
+  margin-top: 1px;
+  color: #98a2b3;
+  font-size: .62rem;
+}
+
+.parent-ui-scope .parent-logout-button {
+  min-height: 34px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: .7rem;
+  font-weight: 600;
+}
+
+/* Shared content */
+.parent-ui-scope .student-dashboard-content {
+  padding: 22px 20px 34px;
+  background: var(--parent-bg);
+}
+
+.parent-ui-scope .student-dashboard-content .container-fluid {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.parent-ui-scope .student-dashboard-content h2 {
+  color: #1f2937;
+  font-size: clamp(1.45rem, 1.9vw, 1.85rem);
+  font-weight: 700 !important;
+  letter-spacing: -.025em;
+}
+
+.parent-ui-scope .student-dashboard-content h5 {
+  color: #273244;
+  font-size: .95rem;
+  font-weight: 660 !important;
+  letter-spacing: -.012em;
+}
+
+.parent-ui-scope .student-dashboard-content h6 {
+  color: #344054;
+  font-size: .82rem;
+  font-weight: 640 !important;
+}
+
+.parent-ui-scope .student-dashboard-content .text-muted {
+  color: #7b8494 !important;
+}
+
+.parent-ui-scope .student-dashboard-content .container-fluid > .mb-4:first-child,
+.parent-ui-scope .student-dashboard-content .container-fluid > .d-flex.mb-4:first-child {
+  margin-bottom: 16px !important;
+  padding: 2px 0 4px;
+}
+
+.parent-ui-scope .student-dashboard-content .container-fluid > .mb-4:first-child::before,
+.parent-ui-scope .student-dashboard-content .container-fluid > .d-flex.mb-4:first-child > div:first-child::before {
+  content: "PARENT PORTAL";
+  display: block;
+  margin-bottom: 5px;
+  color: #b42318;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .09em;
+}
+
+/* Cards */
+.parent-ui-scope .student-dashboard-content .card {
+  border: 1px solid var(--parent-border) !important;
+  border-radius: 12px !important;
+  background: #fff;
+  box-shadow: var(--parent-shadow) !important;
+  overflow: hidden;
+}
+
+.parent-ui-scope .student-dashboard-content .card-body {
+  padding: 18px !important;
+}
+
+.parent-ui-scope .student-dashboard-content .border.rounded,
+.parent-ui-scope .student-dashboard-content .border.rounded-3 {
+  border-color: #e7e9ee !important;
+  border-radius: 10px !important;
+  background: #fff;
+}
+
+/* Forms */
+.parent-ui-scope .student-dashboard-content .form-label {
+  margin-bottom: 6px;
+  color: #475467;
+  font-size: .72rem;
+  font-weight: 600;
+}
+
+.parent-ui-scope .student-dashboard-content .form-control,
+.parent-ui-scope .student-dashboard-content .form-select {
+  min-height: 40px;
+  padding: 8px 11px;
+  border: 1px solid #dfe3e8;
+  border-radius: 8px;
+  background: #fff;
+  color: #344054;
+  font-size: .78rem;
+}
+
+.parent-ui-scope .student-dashboard-content .form-control:focus,
+.parent-ui-scope .student-dashboard-content .form-select:focus {
+  border-color: #efa2a2;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, .08);
+}
+
+/* Buttons */
+.parent-ui-scope .student-dashboard-content .btn {
+  min-height: 36px;
+  padding: 7px 12px;
+  border-radius: 8px;
+  font-size: .73rem;
+  font-weight: 600;
+  box-shadow: none;
+}
+
+.parent-ui-scope .student-dashboard-content .btn-sm {
+  min-height: 31px;
+  padding: 5px 9px;
+  border-radius: 7px;
+  font-size: .67rem;
+}
+
+.parent-ui-scope .student-dashboard-content .btn-primary {
+  border-color: #ef4444;
+  background: #ef4444;
+}
+
+.parent-ui-scope .student-dashboard-content .btn-primary:hover {
+  border-color: #dc2626;
+  background: #dc2626;
+}
+
+.parent-ui-scope .student-dashboard-content .btn-outline-primary {
+  border-color: #efb0b0;
+  color: #b42318;
+  background: #fff;
+}
+
+.parent-ui-scope .student-dashboard-content .btn-outline-primary:hover {
+  border-color: #ef4444;
+  background: #fff5f5;
+  color: #b42318;
+}
+
+.parent-ui-scope .student-dashboard-content .btn-outline-secondary {
+  border-color: #dfe3e8;
+  color: #667085;
+  background: #fff;
+}
+
+/* Tables */
+.parent-ui-scope .student-dashboard-content .table {
+  margin-bottom: 0;
+  color: #344054;
+  font-size: .74rem;
+}
+
+.parent-ui-scope .student-dashboard-content .table thead th {
+  padding: 10px 13px;
+  border-bottom: 1px solid #e6e8ec;
+  background: #f8f9fb;
+  color: #667085;
+  font-size: .65rem;
+  font-weight: 650;
+  letter-spacing: .025em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.parent-ui-scope .student-dashboard-content .table tbody td {
+  padding: 12px 13px;
+  border-color: #eef0f3;
+  vertical-align: middle;
+}
+
+.parent-ui-scope .student-dashboard-content .table tbody tr:hover {
+  background: #fcfcfd;
+}
+
+/* Badges */
+.parent-ui-scope .student-dashboard-content .badge {
+  padding: 5px 8px;
+  border-radius: 999px;
+  font-size: .62rem;
+  font-weight: 600;
+}
+
+.parent-ui-scope .student-dashboard-content .badge.bg-primary {
+  background: #fff0f0 !important;
+  color: #b42318;
+}
+
+.parent-ui-scope .student-dashboard-content .badge.bg-success {
+  background: #eaf8f0 !important;
+  color: #157347;
+}
+
+.parent-ui-scope .student-dashboard-content .badge.bg-danger {
+  background: #fff0f0 !important;
+  color: #b42318;
+}
+
+.parent-ui-scope .student-dashboard-content .badge.bg-warning {
+  background: #fff7df !important;
+  color: #9a6700 !important;
+}
+
+.parent-ui-scope .student-dashboard-content .badge.bg-info {
+  background: #edf7ff !important;
+  color: #175cd3 !important;
+}
+
+.parent-ui-scope .student-dashboard-content .badge.bg-secondary,
+.parent-ui-scope .student-dashboard-content .badge.bg-light {
+  background: #f0f2f5 !important;
+  color: #667085 !important;
+}
+
+/* Alerts */
+.parent-ui-scope .student-dashboard-content .alert {
+  border-radius: 9px;
+  font-size: .76rem;
+}
+
+.parent-ui-scope .student-dashboard-content .alert-danger {
+  border-color: #f9c4c4;
+  background: #fff4f4;
+  color: #9f1d1d;
+}
+
+/* Dashboard */
+.parent-dashboard-polished .parent-welcome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  margin-bottom: 14px;
+  padding: 18px 20px;
+  border: 1px solid #e6e8ed;
+  border-left: 4px solid #ef4444;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.parent-dashboard-polished .parent-welcome-kicker {
+  margin-bottom: 4px;
+  color: #b42318;
+  font-size: .64rem;
+  font-weight: 700;
+  letter-spacing: .09em;
+}
+
+.parent-dashboard-polished .parent-welcome h1 {
+  margin: 0;
+  color: #1f2937;
+  font-size: clamp(1.38rem, 1.8vw, 1.9rem);
+  font-weight: 700;
+  letter-spacing: -.025em;
+}
+
+.parent-dashboard-polished .parent-welcome p {
+  margin: 5px 0 0;
+  color: #748094;
+  font-size: .82rem;
+}
+
+.parent-dashboard-polished .parent-welcome-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.parent-dashboard-polished .parent-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.parent-dashboard-polished .parent-overview-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 104px;
+  padding: 15px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 11px;
+  background: #fff;
+  box-shadow: var(--parent-shadow);
+}
+
+.parent-dashboard-polished .parent-overview-icon {
+  display: inline-flex;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ffe0e0;
+  border-radius: 9px;
+  background: #fff4f4;
+  color: #d92d20;
+}
+
+.parent-dashboard-polished .parent-overview-card > div small,
+.parent-dashboard-polished .parent-overview-card > div strong,
+.parent-dashboard-polished .parent-overview-card > div span {
+  display: block;
+}
+
+.parent-dashboard-polished .parent-overview-card > div small {
+  color: #748094;
+  font-size: .68rem;
+  font-weight: 540;
+}
+
+.parent-dashboard-polished .parent-overview-card > div strong {
+  margin-top: 3px;
+  color: #1f2937;
+  font-size: 1.42rem;
+  font-weight: 700;
+  letter-spacing: -.025em;
+}
+
+.parent-dashboard-polished .parent-overview-card > div > span {
+  margin-top: 3px;
+  color: #98a2b3;
+  font-size: .62rem;
+}
+
+.parent-dashboard-polished .parent-dashboard-grid {
+  display: grid;
+  grid-template-columns: 1.25fr .75fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.parent-dashboard-polished .parent-panel {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: var(--parent-shadow);
+}
+
+.parent-dashboard-polished .parent-panel-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 18px 10px;
+}
+
+.parent-dashboard-polished .parent-panel-header h2 {
+  margin: 0;
+  color: #273244;
+  font-size: .98rem;
+  font-weight: 680;
+}
+
+.parent-dashboard-polished .parent-panel-header p {
+  margin: 3px 0 0;
+  color: #8b95a5;
+  font-size: .67rem;
+}
+
+.parent-dashboard-polished .parent-panel-header a {
+  color: #b42318;
+  font-size: .68rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.parent-dashboard-polished .parent-children-list {
+  display: grid;
+  gap: 10px;
+  padding: 0 14px 14px;
+}
+
+.parent-dashboard-polished .parent-child-card {
+  padding: 14px;
+  border: 1px solid #e8eaee;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.parent-dashboard-polished .parent-child-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.parent-dashboard-polished .parent-child-identity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.parent-dashboard-polished .parent-child-avatar {
+  display: inline-flex;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #fff3f3;
+  color: #c92a2a;
+  font-size: .68rem;
+  font-weight: 700;
+}
+
+.parent-dashboard-polished .parent-child-identity strong,
+.parent-dashboard-polished .parent-child-identity small {
+  display: block;
+}
+
+.parent-dashboard-polished .parent-child-identity strong {
+  color: #273244;
+  font-size: .78rem;
+  font-weight: 650;
+}
+
+.parent-dashboard-polished .parent-child-identity small {
+  margin-top: 2px;
+  color: #8b95a5;
+  font-size: .63rem;
+}
+
+.parent-dashboard-polished .parent-child-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.parent-dashboard-polished .parent-child-stat {
+  padding: 9px 10px;
+  border-radius: 8px;
+  background: #f8f9fb;
+}
+
+.parent-dashboard-polished .parent-child-stat span,
+.parent-dashboard-polished .parent-child-stat strong {
+  display: block;
+}
+
+.parent-dashboard-polished .parent-child-stat span {
+  color: #8b95a5;
+  font-size: .61rem;
+}
+
+.parent-dashboard-polished .parent-child-stat strong {
+  margin-top: 2px;
+  color: #344054;
+  font-size: .78rem;
+  font-weight: 650;
+}
+
+.parent-dashboard-polished .parent-child-actions {
+  display: flex;
+  gap: 7px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.parent-dashboard-polished .parent-quick-links {
+  display: grid;
+  gap: 8px;
+  padding: 0 14px 14px;
+}
+
+.parent-dashboard-polished .parent-quick-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 54px;
+  padding: 10px 11px;
+  border: 1px solid #e7e9ed;
+  border-radius: 9px;
+  background: #fff;
+  color: #344054;
+  text-decoration: none;
+}
+
+.parent-dashboard-polished .parent-quick-link:hover {
+  border-color: #efb7b7;
+  background: #fffafa;
+  color: #b42318;
+}
+
+.parent-dashboard-polished .parent-quick-link > span:first-child {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: .73rem;
+  font-weight: 600;
+}
+
+.parent-dashboard-polished .parent-quick-link svg {
+  color: #d92d20;
+}
+
+.parent-dashboard-polished .parent-notice-wrap {
+  margin-bottom: 14px;
+}
+
+.parent-dashboard-polished .parent-notice-wrap > .card {
+  margin-top: 0 !important;
+}
+
+/* Improve existing child cards/profile cards in menu pages */
+.parent-ui-scope .student-dashboard-content .row.g-4 > [class*="col-"] > .card {
+  height: 100%;
+}
+
+.parent-ui-scope .student-dashboard-content .row.g-4 .card h3 {
+  color: #1f2937;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.parent-ui-scope .student-dashboard-content .row.g-4 .card .text-muted.small {
+  font-size: .66rem;
+}
+
+.parent-ui-scope .student-dashboard-content .fw-semibold,
+.parent-ui-scope .student-dashboard-content .fw-bold {
+  color: #344054;
+}
+
+/* Notifications */
+.parent-ui-scope .student-dashboard-content .card.border-primary {
+  border-color: #f0b3b3 !important;
+  background: #fffafa;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .parent-dashboard-polished .parent-overview-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .parent-dashboard-polished .parent-dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 991px) {
+  .parent-ui-scope .parent-sidebar {
+    width: min(86vw, 246px);
+  }
+
+  .parent-ui-scope .student-dashboard-main {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .parent-ui-scope .parent-topbar {
+    padding: 12px 70px 12px 16px;
+  }
+
+  .parent-ui-scope .parent-topbar-organization {
+    display: none;
+  }
+
+  .parent-ui-scope .student-dashboard-content {
+    padding: 18px 14px 28px;
+  }
+}
+
+@media (max-width: 700px) {
+  .parent-ui-scope .parent-topbar-user {
+    display: none;
+  }
+
+  .parent-dashboard-polished .parent-welcome {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .parent-dashboard-polished .parent-overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .parent-dashboard-polished .parent-child-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .parent-ui-scope .student-dashboard-content {
+    padding: 14px 10px 24px;
+  }
+
+  .parent-ui-scope .student-dashboard-content .card-body {
+    padding: 14px !important;
+  }
+
+  .parent-ui-scope .student-dashboard-content .btn {
+    width: 100%;
+  }
+
+  .parent-ui-scope .student-dashboard-content .d-flex.flex-wrap.gap-2 .btn {
+    width: auto;
+  }
+
+  .parent-ui-scope .parent-topbar-actions {
+    gap: 8px;
+  }
+}
+
+
+/* Parent menu-page usability refinements */
+.parent-ui-scope .parent-welcome-actions .btn,
+.parent-ui-scope .parent-child-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+.parent-ui-scope .student-dashboard-content .container-fluid > .card:first-of-type .card-body > .row.align-items-end,
+.parent-ui-scope .student-dashboard-content .container-fluid > .card:first-of-type .card-body > .row.g-2,
+.parent-ui-scope .student-dashboard-content .container-fluid > .card:first-of-type .card-body > .row.g-3 {
+  align-items: end;
+}
+
+.parent-ui-scope .student-dashboard-content .card .row.g-3 .fw-bold,
+.parent-ui-scope .student-dashboard-content .card .row.g-4 .fw-bold {
+  font-weight: 650 !important;
+}
+
+.parent-ui-scope .student-dashboard-content .card .text-muted + .fw-semibold,
+.parent-ui-scope .student-dashboard-content .card .text-muted + .fw-bold {
+  margin-top: 2px;
+}
+
+.parent-ui-scope .student-dashboard-content .row.g-4 > .col-md-6.col-xl-3 > .card,
+.parent-ui-scope .student-dashboard-content .row.g-4 > .col-md-6 > .card {
+  transition: border-color .16s ease, box-shadow .16s ease;
+}
+
+.parent-ui-scope .student-dashboard-content .row.g-4 > [class*="col-"] > .card:hover {
+  border-color: #dcdfe5 !important;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, .05) !important;
+}
+
+.parent-ui-scope .student-dashboard-content .card .border.rounded.p-3,
+.parent-ui-scope .student-dashboard-content .card .border.rounded-3.p-3 {
+  background: #fbfcfd;
+}
+
+.parent-ui-scope .student-dashboard-content .table-responsive {
+  border-radius: 0 0 12px 12px;
+}
+
+.parent-ui-scope .student-dashboard-content .py-5.text-center {
+  padding-top: 44px !important;
+  padding-bottom: 44px !important;
+}
+
+.parent-ui-scope .student-dashboard-content .py-5.text-center h5 {
+  margin-bottom: 5px !important;
+}
+
+.parent-ui-scope .student-dashboard-content .py-5.text-center p {
+  font-size: .75rem;
+}
+
+/* Attendance and result summary cards */
+.parent-ui-scope .student-dashboard-content .row.g-4.mb-4 .card h3,
+.parent-ui-scope .student-dashboard-content .row.g-4.mb-4 .card h4 {
+  margin-top: 4px;
+  color: #202939;
+  font-size: 1.35rem;
+  font-weight: 700 !important;
+  letter-spacing: -.02em;
+}
+
+/* Recorded courses and fee cards */
+.parent-ui-scope .student-dashboard-content .card .btn + .btn {
+  margin-left: 0;
+}
+
+.parent-ui-scope .student-dashboard-content .card a.btn {
+  text-decoration: none;
+}
+
+/* Notifications */
+.parent-ui-scope .student-dashboard-content .d-flex.flex-column.gap-3 > .card {
+  position: relative;
+}
+
+.parent-ui-scope .student-dashboard-content .d-flex.flex-column.gap-3 > .card.border-primary::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 12px;
+  width: 3px;
+  border-radius: 999px;
+  background: #ef4444;
+}
+
+/* Profile information */
+.parent-ui-scope .student-dashboard-content .card .row.g-4 > [class*="col-"] > .text-muted.small {
+  margin-bottom: 3px;
+  color: #8b95a5 !important;
+  font-size: .64rem;
+}
+
+.parent-ui-scope .student-dashboard-content .card .row.g-4 > [class*="col-"] > .fw-semibold {
+  color: #344054;
+  font-size: .76rem;
+  font-weight: 620 !important;
+}
+
+/* Mobile menu button */
+.parent-ui-scope .parent-menu-toggle {
+  width: 48px;
+  height: 42px;
+  border-radius: 50%;
+  background: #ef4444;
+  box-shadow: 0 4px 14px rgba(239, 68, 68, .18);
+}
+
+@media (max-width: 576px) {
+  .parent-ui-scope .parent-welcome-actions {
+    width: 100%;
+  }
+
+  .parent-ui-scope .parent-welcome-actions .btn {
+    width: 100%;
+  }
+
+  .parent-ui-scope .parent-child-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .parent-ui-scope .parent-child-actions .btn {
+    width: 100%;
+  }
+
+  .parent-ui-scope .student-dashboard-content .table {
+    font-size: .7rem;
+  }
+}
+
+
+/* Parent sidebar grouping and dashboard icon alignment */
+.parent-ui-scope .parent-sidebar-nav {
+  gap: 0;
+}
+
+.parent-ui-scope .parent-nav-section {
+  margin: 0 0 14px;
+}
+
+.parent-ui-scope .parent-nav-section:last-child {
+  margin-bottom: 0;
+}
+
+.parent-ui-scope .parent-nav-section-title {
+  padding: 0 10px 6px;
+  color: #98a2b3;
+  font-size: .59rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.parent-ui-scope .parent-nav-section-items {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.parent-ui-scope .parent-sidebar-nav a {
+  min-height: 40px;
+  padding: 8px 10px;
+}
+
+.parent-ui-scope .parent-nav-label {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  min-height: 22px;
+}
+
+.parent-ui-scope .parent-nav-icon {
+  display: inline-flex;
+  width: 22px;
+  height: 22px;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 22px;
+  line-height: 0;
+}
+
+.parent-ui-scope .parent-nav-icon svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  color: #8792a2;
+}
+
+.parent-ui-scope .parent-nav-text {
+  display: flex;
+  align-items: center;
+  min-height: 22px;
+  line-height: 1.25;
+}
+
+.parent-ui-scope .parent-sidebar-nav a:hover .parent-nav-icon svg {
+  color: #667085;
+}
+
+.parent-ui-scope .parent-sidebar-nav a.active .parent-nav-icon svg {
+  color: #d92d20;
+}
+
+.parent-dashboard-polished .parent-overview-card {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  align-items: center;
+  column-gap: 14px;
+}
+
+.parent-dashboard-polished .parent-overview-icon {
+  display: grid !important;
+  width: 44px;
+  height: 44px;
+  margin: 0 !important;
+  padding: 0;
+  place-items: center;
+  align-self: center;
+  justify-self: center;
+  line-height: 0;
+  color: #d92d20 !important;
+  font-size: initial !important;
+}
+
+.parent-dashboard-polished .parent-overview-icon svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  flex: none;
+  transform: none;
+}
+
+.parent-dashboard-polished .parent-overview-card > div {
+  display: flex;
+  min-width: 0;
+  min-height: 64px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.parent-ui-scope .parent-brand-logo svg,
+.parent-ui-scope .parent-topbar-organization svg,
+.parent-dashboard-polished .parent-welcome-actions .btn svg,
+.parent-dashboard-polished .parent-quick-link svg {
+  display: block;
+  margin: 0;
+  flex: 0 0 auto;
+}
+
+.parent-dashboard-polished .parent-welcome-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+.parent-dashboard-polished .parent-quick-link > span:first-child {
+  align-items: center;
+}
+
+@media (max-width: 991px) {
+  .parent-ui-scope .parent-nav-section {
+    margin-bottom: 12px;
+  }
+}
+

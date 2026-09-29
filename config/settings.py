@@ -12,9 +12,18 @@ https://docs.djangoproject.com/en/6.1/ref/settings/
 
 import os
 from pathlib import Path
+from dotenv import load_dotenv
+import certifi
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+load_dotenv(BASE_DIR / '.env')
+
+# Use PyMySQL as Django's MySQL-compatible driver.
+# This avoids native mysqlclient build/TLS issues on Windows and Vercel.
+import pymysql
+
+pymysql.install_as_MySQLdb()
 PRIVATE_MEDIA_ROOT = Path(os.environ.get('PRIVATE_MEDIA_ROOT', BASE_DIR / 'private_media'))
 
 
@@ -128,7 +137,10 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': os.environ.get(
+            'DB_ENGINE',
+            'django.db.backends.mysql',
+        ),
         'NAME': os.environ.get('DB_NAME', 'student_lms'),
         'USER': os.environ.get('DB_USER', 'lms_user'),
         'PASSWORD': os.environ.get('DB_PASSWORD', '1234567890'),
@@ -139,6 +151,15 @@ DATABASES = {
         },
     }
 }
+
+DB_CA_PATH = os.environ.get('DB_CA_PATH', '').strip()
+
+# TiDB Cloud Starter requires TLS. Use an explicit local CA path when supplied;
+# otherwise use certifi's portable CA bundle (works well on Vercel/Linux).
+if DATABASES['default']['ENGINE'] == 'django_tidb':
+    DATABASES['default']['OPTIONS']['ssl'] = {
+        'ca': DB_CA_PATH or certifi.where(),
+    }
 
 
 # Password validation
@@ -201,7 +222,7 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = Path(os.environ.get('MEDIA_ROOT', BASE_DIR / 'media'))
 
-# Render and other reverse proxies terminate HTTPS before forwarding to Django.
+# Hosting platforms such as Vercel and Render terminate HTTPS before forwarding to Django.
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 REST_FRAMEWORK = {

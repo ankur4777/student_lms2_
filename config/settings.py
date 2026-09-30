@@ -94,23 +94,30 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = [
-    origin.strip()
-    for origin in os.environ.get(
-        'CORS_ALLOWED_ORIGINS',
-        'http://localhost:3000,http://127.0.0.1:3000',
-    ).split(',')
-    if origin.strip()
-]
+CORS_ALLOWED_ORIGINS = list(dict.fromkeys([
+    *[
+        origin.strip()
+        for origin in os.environ.get(
+            'CORS_ALLOWED_ORIGINS',
+            'http://localhost:3000,http://127.0.0.1:3000',
+        ).split(',')
+        if origin.strip()
+    ],
+    'https://student-lms2.vercel.app',
+]))
 
-CSRF_TRUSTED_ORIGINS = [
-    origin.strip()
-    for origin in os.environ.get(
-        'CSRF_TRUSTED_ORIGINS',
-        '',
-    ).split(',')
-    if origin.strip()
-]
+CSRF_TRUSTED_ORIGINS = list(dict.fromkeys([
+    *[
+        origin.strip()
+        for origin in os.environ.get(
+            'CSRF_TRUSTED_ORIGINS',
+            '',
+        ).split(',')
+        if origin.strip()
+    ],
+    'https://student-lms2.vercel.app',
+    'https://student-lms-backend.vercel.app',
+]))
 
 ROOT_URLCONF = 'config.urls'
 
